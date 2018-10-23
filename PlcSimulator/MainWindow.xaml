@@ -1,12 +1,22 @@
 ﻿<Window x:Class="PlcSimulator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PlcSimulator"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:prism="http://prismlibrary.com/"
+        Title="{Binding Title}" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Text="{Binding LeftValue}" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Grid.Row="1" Content="+" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="2" Text="{Binding RightValue}" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Grid.Row="3" Content="=" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="4" Text="{Binding AnswerValue}" IsEnabled="False" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Grid.Row="5" Content ="足し算開始" Command ="{Binding CalcCommand , Mode=OneWay}"/>
     </Grid>
 </Window>

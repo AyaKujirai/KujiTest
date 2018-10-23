@@ -12,29 +12,25 @@ namespace PlcSimulator
 
     using Autofac;
 
+
+
     using Prism.Autofac;
     using Prism.Ioc;
 
     /// <summary>
     /// App.xaml の相互作用ロジック
     /// </summary>
-    public partial class App : PrismApplication
+    public partial class App
     {
-        protected override void OnInitialized()
+        protected override Window CreateShell()
         {
-            this.InitializeComponent();
-
-            this.NavigationService.NavigateAsync("MainPage");
+            return Container.Resolve<MainWindow>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            var containerUpdater = new ContainerBuilder();
-            containerUpdater.RegisterAssemblyTypes(typeof(App).GetTypeInfo().Assembly)
-                .Where(x => x.IsInNamespace("PlcSimulator.ViewModels")).Where(x => x.Name.EndsWith("ViewModel"))
-                .AsSelf();
-            containerUpdater.Update(this.Container);
-            
+
         }
     }
 }
+
