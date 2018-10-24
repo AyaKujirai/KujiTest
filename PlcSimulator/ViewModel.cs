@@ -1,50 +1,50 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace PlcSimulator
 {
     public class ViewModel : BindableBase
     {
-        public Model model;
+        private readonly Model model;
 
         public ViewModel()
         {
-            model = new Model();
+            this.model = new Model();
         }
 
-        private double _leftValue;
+        private double leftValue;
         public double LeftValue
         {
-            get { return _leftValue; }
-            set { this.SetProperty(ref this._leftValue, value); }
+            get => this.leftValue;
+            set => this.SetProperty(ref this.leftValue, value);
         }
 
-        private double _rightValue;
+        private double rightValue;
         public double RightValue
         {
-            get { return _rightValue; }
-            set { this.SetProperty(ref this._rightValue, value); }
+            get => this.rightValue;
+            set => this.SetProperty(ref this.rightValue, value);
         }
 
-        private double _answerValue;
+        private double answerValue;
         public double AnswerValue
         {
-            get { return _answerValue; }
-            set { this.SetProperty(ref this._answerValue, value); }
+            get => this.answerValue;
+            set => this.SetProperty(ref this.answerValue, value);
         }
 
         private DelegateCommand calcComamnd;
         public DelegateCommand CalcCommand
         {
-            get { return calcComamnd = calcComamnd ?? new DelegateCommand(CalcExecute); }
+            get
+            {
+                return this.calcComamnd = this.calcComamnd ?? new DelegateCommand(this.CalcExecute);
+            }
         }
 
         private void CalcExecute()
         {
-            AnswerValue = model.Calc(LeftValue, RightValue);
+            this.AnswerValue = this.model.Calc(this.LeftValue, this.RightValue);
         }
     }
 }

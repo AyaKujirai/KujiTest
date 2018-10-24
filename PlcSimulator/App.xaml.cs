@@ -1,20 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace PlcSimulator
 {
-    using System.Reflection;
-
-    using Autofac;
-
-
-
-    using Prism.Autofac;
     using Prism.Ioc;
 
     /// <summary>
@@ -24,13 +11,11 @@ namespace PlcSimulator
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return this.Container.Resolve<MainWindow>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
         }
     }
 }
-

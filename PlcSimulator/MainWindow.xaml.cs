@@ -9,7 +9,7 @@ namespace PlcSimulator
     {
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
             this.DataContext = new ViewModel();
         }
