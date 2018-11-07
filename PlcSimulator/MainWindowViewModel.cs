@@ -23,20 +23,41 @@ namespace PlcSimulator
 
         public double LeftValue
         {
-            get => this.leftValue;
-            set => this.SetProperty(ref this.leftValue, value);
+            get
+            {
+                return this.leftValue;
+            }
+
+            set
+            {
+                this.SetProperty(ref this.leftValue, value);
+            }
         }
 
         public double RightValue
         {
-            get => this.rightValue;
-            set => this.SetProperty(ref this.rightValue, value);
+            get
+            {
+                return this.rightValue;
+            }
+
+            set
+            {
+                this.SetProperty(ref this.rightValue, value);
+            }
         }
 
         public double AnswerValue
         {
-            get => this.answerValue;
-            set => this.SetProperty(ref this.answerValue, value);
+            get
+            {
+                return this.answerValue;
+            }
+
+            set
+            {
+                this.SetProperty(ref this.answerValue, value);
+            }
         }
 
         public ICommand CalcCommand { get; set; }
