@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlcSimulator", "PlcSimulator\PlcSimulator.csproj", "{A6C97AF8-2B42-40D2-B444-481685D20DAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlcSimulatorTests", "PlcSimulatorTests\PlcSimulatorTests.csproj", "{A4CBCC06-BE02-423B-B1A2-734354F87F04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A6C97AF8-2B42-40D2-B444-481685D20DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6C97AF8-2B42-40D2-B444-481685D20DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6C97AF8-2B42-40D2-B444-481685D20DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4CBCC06-BE02-423B-B1A2-734354F87F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4CBCC06-BE02-423B-B1A2-734354F87F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4CBCC06-BE02-423B-B1A2-734354F87F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4CBCC06-BE02-423B-B1A2-734354F87F04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
