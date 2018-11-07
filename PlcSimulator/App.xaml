@@ -1,8 +1,15 @@
 ﻿<prism:PrismApplication x:Class="PlcSimulator.App"
+<<<<<<< HEAD
                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                         xmlns:prism="http://prismlibrary.com/"
                         xmlns:local="clr-namespace:PlcSimulator">
+=======
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+                        StartupUri="MainWindow.xaml">
+>>>>>>> d4fc21dc17c2bbf07daf17e4e99d1af1a9d868e0
     <Application.Resources>
 
     </Application.Resources>
