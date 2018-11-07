@@ -41,6 +41,9 @@ namespace PlcSimulator
 
         public ICommand CalcCommand { get; set; }
 
-        private void CalcExecute() => this.AnswerValue = this.model.Calc(this.LeftValue, this.RightValue);
+        private void CalcExecute()
+        {
+            this.AnswerValue = this.model.Calc(this.LeftValue, this.RightValue);
+        }
     }
 }
